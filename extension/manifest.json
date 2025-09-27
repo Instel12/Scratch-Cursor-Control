@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Scratch Cursor Control",
+  "version": "1.0",
+  "description": "Gives you more cursor control on Scratch projects",
+    "icons": {
+    "32": "icon32.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://scratch.mit.edu/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
