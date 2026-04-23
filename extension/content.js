@@ -11,7 +11,6 @@ async function check() {
     let tries = 0;
     let interval = setInterval(() => {
       let list = document.querySelector(".flex-row.extension-list");
-      if (list) {
         if (!list.querySelector(".extension-chip.cursor-control")) {
           list.insertAdjacentHTML("beforeend", `
             <div class="extension-chip cursor-control">
@@ -19,7 +18,6 @@ async function check() {
               <div class="extension-content"><span>Cursor Control</span></div>
             </div>
           `);
-        }
         clearInterval(interval);
       }
       if (++tries > 20) {
@@ -27,9 +25,7 @@ async function check() {
       }
     }, 300);
 
-    document
-      .querySelectorAll('.stage_stage_yEvd4.box_box_bP3Aq, .stage_stage-bottom-wrapper_vRJed')
-      .forEach(el => el.style.cursor = 'none');
+    document.getElementsByClassName("stage_stage_yEvd4")[0].style = "cursor:none;";
   }
 }
 check();
